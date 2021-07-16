@@ -6,12 +6,14 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 @ControllerAdvice
-public class TutorialExceptinHandler extends ResponseEntityExceptionHandler{
+public class TutorialExceptionHandler extends ResponseEntityExceptionHandler{
 
   private final MessageSource message;
 
   @Autowired
-  public TutorialExceptinHandler(MessageSource message){
+  public TutorialExceptionHandler(MessageSource message){
     this.message=message;
   }
+
+
 }
