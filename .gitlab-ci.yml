@@ -1,0 +1,18 @@
+stages:
+  - test
+  - build
+
+maven-test:
+  image: maven:3.8.1-jdk-11
+  stage: test
+  script:
+    - mvn test -B
+
+maven-build:
+  image: maven:3.8.1-jdk-11
+  stage: build
+  script:
+    - mvn package
+
+  only:
+    - main
